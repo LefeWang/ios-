@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16C9978F0098A470E22964E6 /* libPods-解析.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CAD8750E64A955A366D6BE0B /* libPods-解析.a */; };
+		5628A46B1DF1466100CD36BF /* my.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5628A46A1DF1466100CD36BF /* my.plist */; };
 		567410DB1DF11BA6002E827D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 567410DA1DF11BA6002E827D /* main.m */; };
 		567410DE1DF11BA6002E827D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 567410DD1DF11BA6002E827D /* AppDelegate.m */; };
 		567410E11DF11BA6002E827D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 567410E01DF11BA6002E827D /* ViewController.m */; };
@@ -15,6 +17,11 @@
 		567410E91DF11BA6002E827D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 567410E71DF11BA6002E827D /* LaunchScreen.storyboard */; };
 		567410F41DF11BA6002E827D /* __Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567410F31DF11BA6002E827D /* __Tests.m */; };
 		567410FF1DF11BA6002E827D /* __UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 567410FE1DF11BA6002E827D /* __UITests.m */; };
+		567411131DF11D01002E827D /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5674110E1DF11D01002E827D /* TFHpple.m */; };
+		567411141DF11D01002E827D /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 567411101DF11D01002E827D /* TFHppleElement.m */; };
+		567411151DF11D01002E827D /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 567411121DF11D01002E827D /* XPathQuery.m */; };
+		567411171DF11DF0002E827D /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 567411161DF11DF0002E827D /* libxml2.2.tbd */; };
+		567411191DF1224D002E827D /* my.html in Resources */ = {isa = PBXBuildFile; fileRef = 567411181DF1224D002E827D /* my.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5628A46A1DF1466100CD36BF /* my.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = my.plist; sourceTree = "<group>"; };
 		567410D61DF11BA6002E827D /* 解析.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "解析.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		567410DA1DF11BA6002E827D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		567410DC1DF11BA6002E827D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +59,17 @@
 		567410FA1DF11BA6002E827D /* 解析UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "解析UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		567410FE1DF11BA6002E827D /* __UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __UITests.m; sourceTree = "<group>"; };
 		567411001DF11BA7002E827D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5674110D1DF11D01002E827D /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		5674110E1DF11D01002E827D /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		5674110F1DF11D01002E827D /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		567411101DF11D01002E827D /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		567411111DF11D01002E827D /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		567411121DF11D01002E827D /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		567411161DF11DF0002E827D /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		567411181DF1224D002E827D /* my.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = my.html; sourceTree = "<group>"; };
+		925B6C44D80596FD1D2EC248 /* Pods-解析.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-解析.debug.xcconfig"; path = "Pods/Target Support Files/Pods-解析/Pods-解析.debug.xcconfig"; sourceTree = "<group>"; };
+		B7A935ABB9A8F87944DB7336 /* Pods-解析.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-解析.release.xcconfig"; path = "Pods/Target Support Files/Pods-解析/Pods-解析.release.xcconfig"; sourceTree = "<group>"; };
+		CAD8750E64A955A366D6BE0B /* libPods-解析.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-解析.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				567411171DF11DF0002E827D /* libxml2.2.tbd in Frameworks */,
+				16C9978F0098A470E22964E6 /* libPods-解析.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1006C42879749922C85AE060 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				925B6C44D80596FD1D2EC248 /* Pods-解析.debug.xcconfig */,
+				B7A935ABB9A8F87944DB7336 /* Pods-解析.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		567410CD1DF11BA6002E827D = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +115,8 @@
 				567410F21DF11BA6002E827D /* 解析Tests */,
 				567410FD1DF11BA6002E827D /* 解析UITests */,
 				567410D71DF11BA6002E827D /* Products */,
+				1006C42879749922C85AE060 /* Pods */,
+				581C7542CFCC4E5DF99F32BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +133,11 @@
 		567410D81DF11BA6002E827D /* 解析 */ = {
 			isa = PBXGroup;
 			children = (
+				5674110C1DF11D01002E827D /* Classes */,
 				567410DC1DF11BA6002E827D /* AppDelegate.h */,
 				567410DD1DF11BA6002E827D /* AppDelegate.m */,
+				567411181DF1224D002E827D /* my.html */,
+				5628A46A1DF1466100CD36BF /* my.plist */,
 				567410DF1DF11BA6002E827D /* ViewController.h */,
 				567410E01DF11BA6002E827D /* ViewController.m */,
 				567410E21DF11BA6002E827D /* Main.storyboard */,
@@ -140,6 +175,28 @@
 			path = "解析UITests";
 			sourceTree = "<group>";
 		};
+		5674110C1DF11D01002E827D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				5674110D1DF11D01002E827D /* TFHpple.h */,
+				5674110E1DF11D01002E827D /* TFHpple.m */,
+				5674110F1DF11D01002E827D /* TFHppleElement.h */,
+				567411101DF11D01002E827D /* TFHppleElement.m */,
+				567411111DF11D01002E827D /* XPathQuery.h */,
+				567411121DF11D01002E827D /* XPathQuery.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		581C7542CFCC4E5DF99F32BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				567411161DF11DF0002E827D /* libxml2.2.tbd */,
+				CAD8750E64A955A366D6BE0B /* libPods-解析.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 567411031DF11BA7002E827D /* Build configuration list for PBXNativeTarget "解析" */;
 			buildPhases = (
+				FFB0BC73ECDD2B7BBDE101DF /* [CP] Check Pods Manifest.lock */,
 				567410D21DF11BA6002E827D /* Sources */,
 				567410D31DF11BA6002E827D /* Frameworks */,
 				567410D41DF11BA6002E827D /* Resources */,
+				86CAF69F428BAD306ED65563 /* [CP] Embed Pods Frameworks */,
+				1B9F1A4735F8616409BEB222 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,7 +310,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				567410E91DF11BA6002E827D /* LaunchScreen.storyboard in Resources */,
+				567411191DF1224D002E827D /* my.html in Resources */,
 				567410E61DF11BA6002E827D /* Assets.xcassets in Resources */,
+				5628A46B1DF1466100CD36BF /* my.plist in Resources */,
 				567410E41DF11BA6002E827D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +333,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1B9F1A4735F8616409BEB222 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-解析/Pods-解析-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86CAF69F428BAD306ED65563 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-解析/Pods-解析-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFB0BC73ECDD2B7BBDE101DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		567410D21DF11BA6002E827D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -279,6 +389,9 @@
 				567410E11DF11BA6002E827D /* ViewController.m in Sources */,
 				567410DE1DF11BA6002E827D /* AppDelegate.m in Sources */,
 				567410DB1DF11BA6002E827D /* main.m in Sources */,
+				567411131DF11D01002E827D /* TFHpple.m in Sources */,
+				567411151DF11D01002E827D /* XPathQuery.m in Sources */,
+				567411141DF11D01002E827D /* TFHppleElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +538,18 @@
 		};
 		567411041DF11BA7002E827D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 925B6C44D80596FD1D2EC248 /* Pods-解析.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SHN2KRB7N5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "解析/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks ${SDKROOT}/usr/include/libxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lefe.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -437,11 +557,18 @@
 		};
 		567411051DF11BA7002E827D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7A935ABB9A8F87944DB7336 /* Pods-解析.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = SHN2KRB7N5;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				INFOPLIST_FILE = "解析/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks ${SDKROOT}/usr/include/libxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lefe.--";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -453,7 +580,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = SHN2KRB7N5;
 				INFOPLIST_FILE = "解析Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks ${SDKROOT}/usr/include/libxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lefe.--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/解析.app/解析";
@@ -466,7 +593,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = SHN2KRB7N5;
 				INFOPLIST_FILE = "解析Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks ${SDKROOT}/usr/include/libxml2";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lefe.--Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/解析.app/解析";
@@ -516,6 +643,7 @@
 				567411051DF11BA7002E827D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		567411061DF11BA7002E827D /* Build configuration list for PBXNativeTarget "解析Tests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +652,7 @@
 				567411081DF11BA7002E827D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		567411091DF11BA7002E827D /* Build configuration list for PBXNativeTarget "解析UITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +661,7 @@
 				5674110B1DF11BA7002E827D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
