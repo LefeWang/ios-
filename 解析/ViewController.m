@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <AFHTTPSessionManager.h>
 #import "TFHpple.h"
+#import <HTMLParser.h>
+#import <HTMLNode.h>
 
 
 @interface ViewController ()
@@ -21,6 +23,8 @@
     NSTimer *timer;
     UILabel *lb;
     UILabel *title;
+    
+    NSMutableArray *resultArr;
 
 }
 
@@ -32,6 +36,7 @@
     [super viewDidLoad];
     numArr=[[NSMutableArray alloc]init];
     titleMArr=[[NSMutableArray alloc]init];
+    resultArr =[[NSMutableArray alloc]init];
     
     lb=[[UILabel alloc]initWithFrame:CGRectMake(20, 80, 200, 60)];
     title=[[UILabel alloc]initWithFrame:CGRectMake(20, 200, 200, 60)];
@@ -47,10 +52,42 @@
 
     
     
-    NSTimer *timer = [NSTimer timerWithTimeInterval:5*60 target:self selector:@selector(loadRequest) userInfo:nil repeats:YES];
+    NSTimer *timer = [NSTimer timerWithTimeInterval:3*60 target:self selector:@selector(loadRequest) userInfo:nil repeats:YES];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     
     
+    
+}
+
+-(void)refrshWithxmlprase{
+    
+    /*
+     <ul class="kjggul_2" id="ulkj_2" onmouseover="ShowKjgg(2)">
+     
+     <li class="kjgglog_1"><img src="images/default/index40.jpg" style="display: block;" width="36px" height="33px"></li>
+     
+     <li class="gray01 kjggiss">161203023期：</li>
+     <li class="kjggred">6</li>
+     <li class="kjggred">3</li>
+     <li class="kjggred">3</li>
+     <li class="kjggred">7</li>
+     <li class="kjggred">3</li>
+    </ul>
+     
+     */
+    TFHpple *pareser=[[TFHpple alloc]initWithHTMLData:responsedate];
+    
+    
+    NSArray *array1 = [pareser
+                       searchWithXPathQuery:@"//ul[@id='ulkj_2']//li[@class='kjggred']"];
+
+    for (TFHppleElement *tempelems in array1) {
+        NSLog(@"%@",[tempelems content]);
+        
+        
+    }
+    
+
     
 }
 
@@ -65,18 +102,19 @@
     
     NSArray *titleArr=[doc searchWithXPathQuery:@"//li[@class='gray01 kjggiss']"];
     
-    NSLog(@"%@",titleArr);
+    
+    
+    
     for (TFHppleElement *elems in titleArr) {
         
         [titleMArr addObject:[elems text]];
         
     }
-    
-//    NSString*str=titleArr[2];
-    
+
     
     
-    [title setText:titleMArr[2]];
+    
+    [title setText: [titleMArr[2] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     
     for (NSInteger i=0; i<elems.count;i++) {
@@ -85,23 +123,21 @@
             [hpelemt text];
             [numArr addObject:[hpelemt text]];
             
+            [resultArr addObject:[hpelemt text]];
+            
         }
         
     }
     NSString *string = [numArr componentsJoinedByString:@"     "];
     [lb setText:string];
-    NSLog(@"%@",numArr);
-    
-    
-    TFHppleElement * element = [elems objectAtIndex:0];
+    [resultArr addObject:titleMArr[2]];
     
     [numArr removeAllObjects];
     [titleMArr removeAllObjects];
     
-
-
-
-
+    NSLog(@"每隔时间段 收集到的结果-- %@",resultArr);
+    [resultArr writeToFile:@"/Users/TeslaMac/Desktop/解析/解析/my.plist" atomically:YES];
+    
 }
 
 -(void)loadRequest{
@@ -117,13 +153,19 @@
     
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-//        [responseObject writeToFile:@"/Users/TeslaMac/Desktop/解析/解析/my.html" options:NSDataWritingAtomic error:nil];
         
         
-        responsedate=[[NSMutableData alloc]initWithData:responseObject];
+        NSString *aString = [[NSString alloc] initWithData:responseObject encoding:CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000)];
+        
+    　　NSData *aData = [aString dataUsingEncoding: NSUTF8StringEncoding];
+        
+    responsedate=[[NSMutableData alloc]initWithData:aData];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self refresh];
+
+            
+           // [self refrshWithxmlprase];
             
         });
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
@@ -132,46 +174,6 @@
 
 
 }
-
-- (void)parseSearchResult: (NSData *)result
-{
-    TFHpple *doc = [TFHpple hppleWithHTMLData:result];
-    
-    // 读取 <tr></tr> 标签里面的内容
-    NSArray *TRElements = [doc searchWithXPathQuery:@"//tr"];
-    int i = 0;
-    for (TFHppleElement *tempTRElement in TRElements) {
-        
-        //放弃读取第一个 <tr></tr> 标签里面的内容
-        if (i == 0) {
-            i++;
-            continue;
-        }
-        
-        // 读取 <td></td> 标签里面的内容
-        NSArray *TDElements = [tempTRElement childrenWithTagName:@"td"];
-        for (TFHppleElement *tempTDElement in TDElements) {
-            
-            if ([tempTDElement text] != nil) {
-                
-                // 读取 <td>xxx</td> 标签里面包含的内容
-                NSLog(@"%@", [tempTDElement text]);
-            }
-            
-            // 读取 <a></a> 里面的内容
-            NSArray *AElements = [tempTDElement searchWithXPathQuery:@"//a"];
-            for (TFHppleElement *tempAElement in AElements) {
-                
-                // 读取 <a href="xxx"></a> 标签里面的 href 属性的值
-                NSLog(@"A-href:%@", [tempAElement objectForKey:@"href"]);
-                
-                // 读取 <a>xxx</a> 标签里面包含的内容
-                NSLog(@"A-text:%@", [tempAElement text]);
-            }
-        }
-    }
-}
-
 
 
 
